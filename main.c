@@ -15,6 +15,10 @@ void afficher_stock(){
 
 int main(){
     char reponse[] = "";
+    int pommes = 1;
+    int oranges = 3;
+    int poires = 2;
+    int ananas = 0;
     while (strcmp(reponse, "quitter") != 0){ // Tant que la réponse n'est pas "quitter"
         afficher_stock();
 
