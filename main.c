@@ -5,8 +5,8 @@ void ajouter_fruit(){
 
 }
 
-void vendre_fruit(){
-
+void vendre_fruit(choix_fruit){
+    
 }
 
 void afficher_stock(){
@@ -19,6 +19,7 @@ int main(){
     int oranges = 3;
     int poires = 2;
     int ananas = 0;
+
     while (strcmp(reponse, "quitter") != 0){ // Tant que la réponse n'est pas "quitter"
         afficher_stock();
 
@@ -26,7 +27,10 @@ int main(){
         scanf("%s", reponse);
 
         if (strcmp(reponse, "vendre") == 0){
-            vendre_fruit();
+            char choix[] = "";
+            printf("\nQuel fruit :");
+            scanf("%s", choix);
+            vendre_fruit(choix);
         }
 
         else if (strcmp(reponse, "ajouter") == 0){
