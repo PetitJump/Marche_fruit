@@ -1,19 +1,5 @@
 # Marche_fruit
 
-Exemple :
-```bash
-Inventaire :
-Pomme : 10
-Banane : 5
-Orange : 8
-
-Que voulez-vous faire ? (vendre/ajouter/quitter) : vendre
-Quel fruit vendre ? Pomme
-Combien ? 3
-Vente effectuée.
-
-Inventaire :
-Pomme : 7
-Banane : 5
-Orange : 8
-```
+## Fonctionnement :
+- On demande à l'user ce qu'il veut faire (achter/vendre/quitter)
+- Fait l'action souhaiter en modifiant directement le stock avec des pointeurs
