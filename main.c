@@ -77,6 +77,9 @@ int main(){
 
             ajouter_fruit(choix, nombre, &pommes, &oranges, &poires);
         }
+        else {
+            printf("\nCommande invalide");
+        }
     }
     return 0;
 }
