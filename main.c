@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
-void ajouter_fruit(char * choix_fruit, int *pomme, int *orange, int *poire){
+void ajouter_fruit(char * choix_fruit, int nombre, int *pomme, int *orange, int *poire){
     if (strcmp(choix_fruit, "pomme") == 0){
-        *pomme += 1;
+        *pomme += nombre;
     }
 
     else if (strcmp(choix_fruit, "orange") == 0){
-        *orange += 1;
+        *orange += nombre;
     }
 
     else if (strcmp(choix_fruit, "poire") == 0){
-        *poire += 1;
+        *poire += nombre;
     }
 
     else {
@@ -19,17 +19,17 @@ void ajouter_fruit(char * choix_fruit, int *pomme, int *orange, int *poire){
     }
 }
 
-void vendre_fruit(char * choix_fruit, int *pomme, int *orange, int *poire){
+void vendre_fruit(char * choix_fruit, int nombre, int *pomme, int *orange, int *poire){
     if (strcmp(choix_fruit, "pomme") == 0){
-        *pomme -= 1;
+        *pomme -= nombre;
     }
 
     else if (strcmp(choix_fruit, "orange") == 0){
-        *orange -= 1;
+        *orange -= nombre;
     }
 
     else if (strcmp(choix_fruit, "poire") == 0){
-        *poire -= 1;
+        *poire -= nombre;
     }
 
     else {
@@ -54,16 +54,28 @@ int main(){
 
         if (strcmp(reponse, "vendre") == 0){
             char choix[20] = "";
+            int nombre;
+
             printf("\nQuel fruit (pomme/orange/poire) : ");
             scanf("%s", choix);
-            vendre_fruit(choix, &pommes, &oranges, &poires);
+
+            printf("\nCombien : ");
+            scanf("%i", &nombre);
+
+            vendre_fruit(choix, nombre, &pommes, &oranges, &poires);
         }
 
         else if (strcmp(reponse, "ajouter") == 0){
             char choix[20] = "";
+            int nombre;
+
             printf("\nQuel fruit (pomme/orange/poire) : ");
             scanf("%s", choix);
-            ajouter_fruit(choix, &pommes, &oranges, &poires);
+
+            printf("\nCombien : ");
+            scanf("%d", &nombre);
+
+            ajouter_fruit(choix, nombre, &pommes, &oranges, &poires);
         }
     }
     return 0;
