@@ -13,6 +13,10 @@ void ajouter_fruit(char * choix_fruit, int *pomme, int *orange, int *poire){
     else if (strcmp(choix_fruit, "poire") == 0){
         *poire += 1;
     }
+
+    else {
+        printf("\nCe fruit n'éxiste pas...\n");
+    }
 }
 
 void vendre_fruit(char * choix_fruit, int *pomme, int *orange, int *poire){
@@ -26,6 +30,10 @@ void vendre_fruit(char * choix_fruit, int *pomme, int *orange, int *poire){
 
     else if (strcmp(choix_fruit, "poire") == 0){
         *poire -= 1;
+    }
+
+    else {
+        printf("\nCe fruit n'existe pas...\n");
     }
 }
 
@@ -46,14 +54,14 @@ int main(){
 
         if (strcmp(reponse, "vendre") == 0){
             char choix[20] = "";
-            printf("\nQuel fruit :");
+            printf("\nQuel fruit (pomme/orange/poire) : ");
             scanf("%s", choix);
             vendre_fruit(choix, &pommes, &oranges, &poires);
         }
 
         else if (strcmp(reponse, "ajouter") == 0){
             char choix[20] = "";
-            printf("\nQuel fruit :");
+            printf("\nQuel fruit (pomme/orange/poire) : ");
             scanf("%s", choix);
             ajouter_fruit(choix, &pommes, &oranges, &poires);
         }
